@@ -1,0 +1,125 @@
+interface:
+  GetHomeNotes:
+    path: f'/v3/notesvr/user/{self.userid}/home/startindex/0/rows/50/notes'
+    mustKey: [ 'userid','startIndex', 'rows' ]
+    optionKeys: [ ]
+    base: {
+      'groupId': 'userid',
+      'startIndex': 0,
+      'rows': 50
+    }
+
+  CreateNoteInfo:
+    path: '/v3/notesvr/set/noteinfo'
+    mustKey: [ 'noteId' ]
+    optionKeys: [ ]
+    base: {
+      "noteId": '',
+      "star": 0,
+      "remindTime": 0,
+      "remindType": 0,
+      "groupId": ''
+    }
+
+  CreateNoteContent:
+    path: '/v3/notesvr/set/notecontent'
+    mustKey: [ ]
+    optionKeys: [ ]
+    base: {
+      "title": "test",
+      "summary": "test",
+      "body": "test",
+      "localContentVersion": "",
+      "noteId": "",
+      "thumbnail": 'null',
+      "bodyType": 0
+    }
+
+  GetNoteBody:
+    path: '/v3/notesvr/get/notebody'
+    mustKey: []
+    optionKeys: []
+    base: {
+      'noteIds': ''
+    }
+
+  DeleteNote:
+    path: '/v3/notesvr/delete'
+    mustKey: [ ]
+    optionKeys: [ ]
+    base: {
+      'noteId': ''
+    }
+
+  GetNoteGroup:
+    path: '/notesvr/get/notegroup'
+    mustKey: [ ]
+    optionKeys: [ ]
+    base: {
+      "lastRequestTime": 0,
+      "excludeInValid": True
+    }
+
+  CreateGroup:
+    path: '/v3/notesvr/set/notegroup'
+    mustKey: [ ]
+    optionKeys: [ ]
+    base: {
+      'groupId': '',
+      'groupName': '旅游笔记test',
+      'order': 0
+    }
+
+  GetGroupNote:
+    path: '/v3/notesvr/web/getnotes/group'
+    mustKey: ['groupId']
+    optionKeys: ['startIndex', 'rows']
+    base: {
+      'groupId': 'groupId',
+      'startIndex': 0,
+      'rows': 10
+    }
+
+  DeleteGroup:
+    path: '/notesvr/delete/notegroup'
+    mustKey: [ 'groupId' ]
+    optionKeys: [ 'startIndex', 'rows' ]
+    base: {
+      "groupId": ''
+    }
+
+  GetNotesRemind:
+    path: '/v3/notesvr/web/getnotes/remind'
+    mustKey: []
+    optionKeys: []
+    base: {
+      "rows": 50,
+      "startIndex": 0,
+      "month": "",
+      "remindStartTime": "",
+      "remindEndTime": ""
+    }
+
+  GetInvaildNotes:
+    path: f'/v3/notesvr/user/{self.userid}/invalid/startindex/0/rows/50/note'
+    mustKey: [ ]
+    optionKeys: [ ]
+    base: {}
+
+  RestoreNotes:
+    path: f'/notesvr/v2/user/{self.userid}/notes'
+    mustKey: [ ]
+    optionKeys: [ ]
+    base: {
+      "noteIds": ["c102cc7690fe63d31d928ea4996daefc"],
+      "userId": 254829293
+    }
+
+  CleanRecycleBin:
+    path: '/v3/notesvr/cleanrecyclebin'
+    mustKey: [ ]
+    optionKeys: [ ]
+    base: {
+      "noteIds": ["-1"]
+    }
+
