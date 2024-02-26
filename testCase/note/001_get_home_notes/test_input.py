@@ -78,7 +78,7 @@ class TestGetHomeNotes_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand([' ', '你好abc', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand([' ', '你好abc', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase04(self, v):
         """startindex入参校验"""
 
@@ -94,7 +94,7 @@ class TestGetHomeNotes_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand([' ', '你好abc', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand([' ', '你好abc', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase05(self, v):
         """rows入参校验"""
 
@@ -110,7 +110,7 @@ class TestGetHomeNotes_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand([' ', '你好abc', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand([' ', '你好abc', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase06(self, v):
         """userid入参校验"""
 

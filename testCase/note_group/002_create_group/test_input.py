@@ -44,7 +44,7 @@ class TestCreateGroup_Input(unittest.TestCase):
         expect = {"errorCode": -7, "errorMsg": "参数不合法！"}
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand(['', None])
+    @parameterized.expand(['', 'None'])
     def testCase02(self, v):
         """groupId字段为空"""
         step('STEP:新增分组接口请求')
@@ -80,7 +80,7 @@ class TestCreateGroup_Input(unittest.TestCase):
         expect = {"errorCode": -7, "errorMsg": "参数不合法！"}
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand(['', None])
+    @parameterized.expand(['', 'None'])
     def testCase05(self, v):
         """groupName字段为空"""
         step('STEP:新增分组接口请求')
@@ -117,7 +117,7 @@ class TestCreateGroup_Input(unittest.TestCase):
         self.assertEqual(200, res.status_code, msg='状态码异常，期望的状态200')
         CheckMethod().output_check(self.assertBase, res.json())
 
-    @parameterized.expand(['', None])
+    @parameterized.expand(['', 'None'])
     def testCase08(self, v):
         """order字段为空"""
         step('STEP:新增分组接口请求')

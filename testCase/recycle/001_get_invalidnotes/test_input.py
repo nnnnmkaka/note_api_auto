@@ -46,7 +46,7 @@ class TestGetInvaildNotes_Input(unittest.TestCase):
         res = self.re.get(url=self.host + path, sid=self.wps_sid)
         self.assertEqual(404, res.status_code, msg='状态码异常，期望的状态值为404')
 
-    @parameterized.expand([' ', '你好abc', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand([' ', '你好abc', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase02(self, v):
         """userid字段:入参校验"""
         step('PRE-STEP: 创建1条便签数据')
@@ -62,7 +62,7 @@ class TestGetInvaildNotes_Input(unittest.TestCase):
         expect = {"errorCode": -7, "errorMsg": "参数类型错误！"}
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand([' ', '你好abc', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand([' ', '你好abc', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase03(self, v):
         """startindex入参校验"""
         step('PRE-STEP: 创建1条便签数据')
@@ -79,7 +79,7 @@ class TestGetInvaildNotes_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand([' ', '你好abc', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand([' ', '你好abc', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase03(self, v):
         """rows入参校验"""
         step('PRE-STEP: 创建1条便签数据')

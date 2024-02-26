@@ -47,7 +47,7 @@ class TestRestoreNotes_Input(unittest.TestCase):
         res = self.re.patch(url=self.host + path, body=body, sid=self.wps_sid)
         self.assertEqual(405, res.status_code, msg='状态码异常，期望的状态值为405')
 
-    @parameterized.expand([' ', '你好abc', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand([' ', '你好abc', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase02(self, v):
         """userid字段:入参校验"""
         step('PRE-STEP: 创建1条便签数据')
@@ -72,7 +72,7 @@ class TestRestoreNotes_Input(unittest.TestCase):
         res = self.re.patch(url=self.host + path, body=body, sid=self.wps_sid)
         self.assertEqual(405, res.status_code, msg='状态码异常，期望的状态值为405')
 
-    @parameterized.expand([' ', '你好abc', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand([' ', '你好abc', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase04(self, v):
         """noteIds字段:入参校验"""
         step('PRE-STEP: 创建1条便签数据')

@@ -50,7 +50,7 @@ class TestGetNoteBody_Input(unittest.TestCase):
         # 断言
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand(['', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand(['', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase02(self, v):
         """noteIds入参校验"""
         step('PRE-STEP: 创建1条便签数据')

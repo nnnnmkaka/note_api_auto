@@ -47,7 +47,7 @@ class TestCleanRecycleBin_Input(unittest.TestCase):
         expect = {"errorCode": -7, "errorMsg": "参数不合法！"}
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand([' ', '你好abc', None, '‘ or ‘1=1', '“ or ”1=1'])
+    @parameterized.expand([' ', '你好abc', 'None', '‘ or ‘1=1', '“ or ”1=1'])
     def testCase02(self, v):
         step('PRE-STEP: 创建1条便签数据')
         c_notes = CreateNotes().create_notes(self.userid, self.wps_sid, 1)

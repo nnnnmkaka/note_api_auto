@@ -54,7 +54,7 @@ class TestGetNotesRemind_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand(['', None, 'null'])
+    @parameterized.expand(['', 'None', 'null'])
     def testCase02(self, v):
         """remindStartTimez字段为空"""
         step('PRE-STEP:新建一条日历便签')
@@ -102,7 +102,7 @@ class TestGetNotesRemind_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand(['', None, 'null'])
+    @parameterized.expand(['', 'None', 'null'])
     def testCase05(self, v):
         """remindEndTime字段为空"""
         step('PRE-STEP:新建一条日历便签')
@@ -149,7 +149,7 @@ class TestGetNotesRemind_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(self.assertBase, res.json())
 
-    @parameterized.expand(['', None, 'null'])
+    @parameterized.expand(['', 'None''null'])
     def testCase08(self, v):
         """startIndex字段为空"""
         step('PRE-STEP:新建一条日历便签')
@@ -197,7 +197,7 @@ class TestGetNotesRemind_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(self.assertBase, res.json())
 
-    @parameterized.expand(['', None, 'null'])
+    @parameterized.expand(['', 'None', 'null'])
     def testCase11(self, v):
         """rows字段为空"""
         step('PRE-STEP:新建一条日历便签')

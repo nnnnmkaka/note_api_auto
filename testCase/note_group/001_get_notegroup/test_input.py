@@ -46,7 +46,7 @@ class TestGetNoteGroup_Input(unittest.TestCase):
         # 断言状态码
         self.assertEqual(200, res.status_code, msg='状态码异常，期望的状态200')
 
-    @parameterized.expand(['', None])
+    @parameterized.expand(['', 'None'])
     def testCase02(self, v):
         """excludeInvalid为空"""
         step('PRE-STEP:新建1个分组')

@@ -52,7 +52,7 @@ class TestGetGroupNote_Input(unittest.TestCase):
         expect = {"errorCode": -7, "errorMsg": "参数不合法！"}
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand(['', None, '@&#……￥'])
+    @parameterized.expand(['', 'None', '@&#……￥'])
     def testCase02(self, v):
         """groupId字段为空or特殊字符"""
         step('PRE-STEP:新建一个分组')
@@ -99,7 +99,7 @@ class TestGetGroupNote_Input(unittest.TestCase):
         expect = {"responseTime": 0, "webNotes": []}
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand(['', None])
+    @parameterized.expand(['', 'None'])
     def testCase05(self, v):
         """startIndex字段为空"""
         step('PRE-STEP:新建一个分组')
@@ -162,7 +162,7 @@ class TestGetGroupNote_Input(unittest.TestCase):
         expect = {"responseTime": 0, "webNotes": []}
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand(['', None])
+    @parameterized.expand(['', 'None'])
     def testCase09(self, v):
         """rows字段为空"""
         step('PRE-STEP:新建一个分组')
