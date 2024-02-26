@@ -57,7 +57,7 @@ class TestDeleteNote_Input(unittest.TestCase):
         # 断言
         CheckMethod().output_check(self.assertBase, res.json())
 
-    @parameterized.expand(['', None])
+    @parameterized.expand(['', 'None'])
     def testCase03(self, v):
         """noteIds入参校验"""
         step('PRE-STEP: 创建1条便签数据')
