@@ -72,7 +72,7 @@ class TestGetHomeNotes_Handle(unittest.TestCase):
     def testCase04(self):
         """查询普通便签接口不返回分组便签"""
         step('PRE-STEP: 创建1条日历便签数据')
-        c_notes = CreateNotes.create_remind_notes(self.userid, self.wps_sid, 1)
+        c_notes = CreateNotes().create_remind_notes(self.userid, self.wps_sid, 1)
         step('STEP: 获取首页便签的接口请求')
         startindex = 0
         rows = 200
