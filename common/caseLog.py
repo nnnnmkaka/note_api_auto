@@ -13,7 +13,7 @@ def info(text):
     content = f"[INFO]{formatted_time}-{code_path} >> {text}"
     print(Fore.LIGHTGREEN_EX + content)
     str_time = datetime.now().strftime("%Y%m%d")
-    with open(file=Dir + '\/logs\/' + f'{str_time}_info.log', mode='a', encoding='utf-8') as f:
+    with open(file=Dir + '/logs/' + f'{str_time}_info.log', mode='a', encoding='utf-8') as f:
         f.write(content + '\n')
 
 
@@ -24,9 +24,9 @@ def error(text):
     content = f"[ERROR]{formatted_time}-{code_path} >> {text}"
     print(Fore.LIGHTRED_EX + content)
     str_time = datetime.now().strftime("%Y%m%d")
-    with open(file=Dir + '\/logs\/' + f'{str_time}_error.log', mode='a', encoding='utf-8') as f:
+    with open(file=Dir + '/logs/' + f'{str_time}_error.log', mode='a', encoding='utf-8') as f:
         f.write(content + '\n')
-    with open(file=Dir + '\/logs\/' + f'{str_time}_info.log', mode='a', encoding='utf-8') as f:
+    with open(file=Dir + '/logs/' + f'{str_time}_info.log', mode='a', encoding='utf-8') as f:
         f.write(content + '\n')
 
 
@@ -37,7 +37,7 @@ def step(text):
     content = f"[STEP]{formatted_time}-{code_path}  >> {text}"
     print(Fore.LIGHTCYAN_EX + content)
     str_time = datetime.now().strftime("%Y%m%d")
-    with open(file=Dir + '\/logs\/' + f'{str_time}_info.log', mode='a', encoding='utf-8') as f:
+    with open(file=Dir + '/logs/' + f'{str_time}_info.log', mode='a', encoding='utf-8') as f:
         f.write(content + '\n')
 
 
