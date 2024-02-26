@@ -201,7 +201,7 @@ class TestCreateNoteContent_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(expect, res.json())
 
-    @parameterized.expand(['', None])
+    @parameterized.expand(['', 'None'])
     def testCase12(self, v):
         """body入参校验：为空"""
         step('PRE-STEP: 创建1条便签主体')
