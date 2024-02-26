@@ -277,7 +277,7 @@ class TestCreateNoteContent_Input(unittest.TestCase):
         # 通用断言
         CheckMethod().output_check(self.assertBase, res.json())
 
-    @parameterized.expand(['', 'None', 1000])
+    @parameterized.expand(['', 'None', '1000'])
     def testCase17(self, v):
         """localContentVersion入参校验"""
         step('PRE-STEP: 创建1条便签主体')
